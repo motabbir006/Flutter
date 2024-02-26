@@ -1,0 +1,8 @@
+  floatingActionButton: FloatingActionButton(
+        elevation: 10,
+        hoverColor: Colors.amber,
+        backgroundColor: Colors.green,
+        child: const Icon(Icons.add),
+        onPressed: () {  SnackMsg("This is a Search Icon", context); },
+   
+      )
