@@ -1,0 +1,58 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(const NBIU_CC());
+}
+
+class NBIU_CC extends StatelessWidget {
+  const NBIU_CC({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        theme: ThemeData(primarySwatch: Colors.green),
+        darkTheme: ThemeData(primarySwatch: Colors.deepPurple),
+        debugShowCheckedModeBanner: false,
+        home: HomeActivity());
+  }
+}
+
+SnackMsg(message, context) {
+  return ScaffoldMessenger.of(context)
+      .showSnackBar(SnackBar(content: Text(message)));
+}
+
+class HomeActivity extends StatelessWidget {
+  const HomeActivity({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("NBIU Computer Club"),
+        titleSpacing: 10,
+        centerTitle: false,
+        backgroundColor: Colors.green,
+        actions: [
+          IconButton(
+              onPressed: () {
+                SnackMsg("This is a Search Icon", context);
+              },
+              icon: Icon(Icons.search)),
+          IconButton(
+              onPressed: () {
+                SnackMsg("This is a home Icon", context);
+              },
+              icon: Icon(Icons.home)),
+          IconButton(
+              onPressed: () {
+                SnackMsg("This is a notification Icon", context);
+              },
+              icon: Icon(Icons.notifications)),
+        ],
+      ),
+      body: const Text("Hello World"),
+    );
+  }
+}
