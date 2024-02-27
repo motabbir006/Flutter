@@ -1,0 +1,13 @@
+bottomNavigationBar: BottomNavigationBar(
+      items:  const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.event), label: "Event"),
+        BottomNavigationBarItem(icon: Icon(Icons.phone),label: "Telephone"),
+      ],
+          backgroundColor: Colors.green,
+          fixedColor: Colors.red,
+          unselectedFontSize: 12,
+          unselectedItemColor: Colors.white,
+          selectedFontSize: 15,
+          iconSize: 28,
+    ),
