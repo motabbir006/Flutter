@@ -1,0 +1,32 @@
+
+MyAlertDialog(context){
+  return showDialog(context: context,
+      builder: (BuildContext context) {
+    return Expanded(child: AlertDialog
+      (title: Text("Alert! "),
+    content: Text("Do you Want to Delete"),
+    actions: [
+      TextButton(onPressed: (){
+        SnackMsg("Delete Success", context);
+        Navigator.of(context).pop();
+      }, child: Text("Yes")),
+      TextButton(onPressed: (){
+        Navigator.of(context).pop();
+      }, child: Text("No")),
+    ],
+    ));
+      });
+}
+
+Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+      TextButton(onPressed: (){MyAlertDialog(context);}, child: Text("This is Text Button"),style: buttonStyle,)
+    ],
+    )
+      ]
+
+      ),
