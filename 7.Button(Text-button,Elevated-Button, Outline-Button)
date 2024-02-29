@@ -1,0 +1,42 @@
+//Toast msg
+SnackMsg(message, context) {
+  return ScaffoldMessenger.of(context)
+      .showSnackBar(SnackBar(content: Text(message)));
+}
+
+ //For Button Style
+ @override
+  Widget build(BuildContext context) {
+
+    ButtonStyle btn=ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(100),
+        backgroundColor: Colors.redAccent,
+        foregroundColor: Colors.black,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10))
+    )
+    );
+    ButtonStyle buttonStyle = TextButton.styleFrom(
+      padding: EdgeInsets.all(100),
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.black,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10))
+      )
+    );
+
+//Body Section
+Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+      TextButton(onPressed: (){SnackMsg("This is Text Button", context);}, child: Text("This is Text Button"),style: buttonStyle,),
+       ElevatedButton(onPressed: (){SnackMsg("This is ElevatedButton", context);}, child: Text("This is a Elivated button"),style: btn,),
+       OutlinedButton(onPressed: (){ SnackMsg("This is Outlined Button", context);}, child: Text("This is a Outline Button"),style: buttonStyle,),
+    ],
+    )
+      ]
+
+      ),
