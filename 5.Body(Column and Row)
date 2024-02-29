@@ -1,0 +1,53 @@
+  body: (Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                child: (Text("Hello World")),
+              ),
+              Container(
+                child: (Text("Hello World")),
+              ),
+              Container(
+                child: (
+                    //Image.network("https://pixabay.com/illustrations/online-internet-icon-symbols-www-942408/")
+                    Text("Hello World")),
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                child: (Text("Hello World")),
+              ),
+              Container(
+                child: (Text("Hello World")),
+              ),
+              Container(
+                child: (
+                    //Image.network("https://pixabay.com/illustrations/online-internet-icon-symbols-www-942408/")
+                    Text("Hello World")),
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                child: (Text("Hello World")),
+              ),
+              Container(
+                child: (Text("Hello World")),
+              ),
+              Container(
+                child: (
+                    //Image.network("https://pixabay.com/illustrations/online-internet-icon-symbols-www-942408/")
+                    Text("Hello World")),
+              )
+            ],
+          )
+        ],
+      )),
