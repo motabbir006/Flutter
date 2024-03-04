@@ -1,0 +1,95 @@
+import 'package:day2/Dynamic_list_view.dart';
+import 'package:day2/Fragments/alarm_freg.dart';
+import 'package:day2/Fragments/email_freg.dart';
+import 'package:day2/Fragments/home_frag.dart';
+import 'package:day2/Fragments/person_freg.dart';
+import 'package:day2/Fragments/search_freg.dart';
+import 'package:day2/Fragments/setting_freg.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.deepOrange),
+      home: HomeActivity(),
+    );
+  }
+}
+
+SnackMsg(message, context) {
+  return ScaffoldMessenger.of(context)
+      .showSnackBar(SnackBar(content: Text(message)));
+}
+
+class HomeActivity extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+        length: 6,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("My Apps"),
+            backgroundColor: Colors.cyan,
+            centerTitle: true,
+            bottom: TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.home), text: "Home"),
+                Tab(icon: Icon(Icons.search), text: "Search"),
+                Tab(
+                  icon: Icon(Icons.email),
+                  text: "Email",
+                ),
+                Tab(
+                  icon: Icon(Icons.person),
+                  text: "Person",
+                ),
+                Tab(
+                  icon: Icon(Icons.settings),
+                  text: "Setting",
+                ),
+                Tab(
+                  icon: Icon(Icons.access_alarm),
+                  text: "Alarm",
+                ),
+              ],
+            ),
+          ),
+          body: TabBarView(
+            children: [
+              home_freg(),
+              search_freg(),
+              email_freg(),
+              person(),
+              setting_freg(),
+              alarm_freg(),
+            ],
+          ),
+        ));
+  }
+}
+
+
+
+//Alarm_freg
+
+import 'package:flutter/cupertino.dart';
+
+class alarm_freg extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Text("Alarm Freg"),
+      ),
+    );
+  }
+
+}
