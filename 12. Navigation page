@@ -146,3 +146,12 @@ class Page2 extends StatelessWidget {
     );
   }
 }
+
+
+
+///data pass from one page to another page
+ String msg;
+
+  Page2(
+      this.msg,
+      {super.key});
